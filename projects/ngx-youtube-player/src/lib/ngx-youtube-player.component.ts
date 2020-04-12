@@ -43,7 +43,7 @@ export class YoutubePlayerComponent implements AfterContentInit {
     public playerService: YoutubePlayerService,
     private elementRef: ElementRef,
     private renderer: Renderer2
-  ) {}
+  ) { }
 
   ngAfterContentInit() {
     const htmlId = this.playerService.generateUniqueId();
@@ -72,6 +72,6 @@ export class YoutubePlayerComponent implements AfterContentInit {
     const protocol = hasWindow
       ? window.location.protocol.replace(':', '')
       : 'http';
-    return protocol;
+    return 'http';
   }
 }
